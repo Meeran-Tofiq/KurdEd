@@ -11,7 +11,7 @@ export default function ContinueButton({ label, onPressFunc, extraStyles }) {
 
 const styles = StyleSheet.create({
 	Button: {
-		width: "100%",
+		width: "80%",
 		flexDirection: "row",
 		justifyContent: "center",
 		alignItems: "center",
