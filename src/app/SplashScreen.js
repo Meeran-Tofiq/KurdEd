@@ -1,24 +1,23 @@
 import React from "react";
 import ContinueButton from "../components/ContinueButton";
 import { StyleSheet, View, Image, Text } from "react-native";
+import img from "../../assets/kurdish-man-holding-book.png";
 
-export default function SplashScreen() {
+export default function SplashScreen({ navigation }) {
 	return (
 		<View style={styles.SplashScreen}>
 			<View style={styles.Content}>
-				<Image
-					style={styles.Illustration}
-					source={require("../../assets/kurdish-man-holding-book.png")}
-				/>
-				<View style={styles.TextContent}>
+				<Image style={styles.Illustration} source={img} />
+				<View>
 					<View style={styles.Title}>
 						<Text style={styles.Text}>KURD ED</Text>
 					</View>
+					<Text style={styles.textContent}>بخوێنە لە هەر شوێنێکبیت!</Text>
 				</View>
 			</View>
 			<ContinueButton
 				label={"دەستپێبکە"}
-				onPressFunc={() => {}}
+				onPressFunc={() => navigation.navigate("Intro Pages")}
 				extraStyles={styles.Button}
 			/>
 		</View>
@@ -34,6 +33,7 @@ const styles = StyleSheet.create({
 	Content: {
 		marginTop: "auto",
 		marginBottom: "auto",
+		gap: 10,
 	},
 	Text: {
 		color: "rgba(60,58,54,1)",
@@ -43,5 +43,9 @@ const styles = StyleSheet.create({
 	},
 	Button: {
 		marginBottom: 32,
+	},
+	textContent: {
+		fontSize: 18,
+		textAlign: "center",
 	},
 });
