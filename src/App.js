@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View } from "react-native";
-import SplashScreen from "./app/SpashScreen";
+import SplashScreen from "./app/SplashScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
