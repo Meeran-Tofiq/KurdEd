@@ -36,7 +36,10 @@ export default function Intro({}) {
 				<Text>{descs[pageNo]}</Text>
 			</View>
 			<View>{/* pagination space */}</View>
-			<ContinueButton label={"دواتر"} onPressFunc={handleIncreasingPage} />
+			<ContinueButton
+				label={pageNo < 2 ? "دواتر" : "با بخوێنین!"}
+				onPressFunc={handleIncreasingPage}
+			/>
 		</View>
 	);
 }
