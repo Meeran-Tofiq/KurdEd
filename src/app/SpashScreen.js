@@ -1,5 +1,5 @@
 import React from "react";
-import ContinueButton from "../common/ContinueButton";
+import ContinueButton from "../components/ContinueButton";
 import { StyleSheet, View, Image, Text } from "react-native";
 
 export default function SplashScreen() {
@@ -8,7 +8,7 @@ export default function SplashScreen() {
 			<View style={styles.Content}>
 				<Image
 					style={styles.Illustration}
-					source={require("../../../assets/kurdish-man-holding-book.png")}
+					source={require("../../assets/kurdish-man-holding-book.png")}
 				/>
 				<View style={styles.TextContent}>
 					<View style={styles.Title}>
