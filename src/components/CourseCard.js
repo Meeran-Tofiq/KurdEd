@@ -1,10 +1,12 @@
 import React from "react";
 import { View, Image, Text, StyleSheet } from "react-native";
 
-export default function CourseCard({ course }) {
+export default function CourseCard({ course, hasPaid }) {
 	return (
 		<View>
-			<View>
+			<View
+				style={hasPaid ? styles.imageContainer : styles.unpaidImageContainer}
+			>
 				{/* Fotn Awesome Lock icon goes here */}
 				<Image source={course.img} />
 			</View>
@@ -20,6 +22,7 @@ export default function CourseCard({ course }) {
 }
 
 const styles = StyleSheet.create({
+	unpaidImageContainer: {},
 	imageContainer: {},
 	courseInfoContainer: {},
 });
