@@ -1,20 +1,35 @@
 import React, { useState } from "react";
 import { View, TextInput, StyleSheet, Pressable, Text } from "react-native";
+import courses from "../tests/__mocks__/courses";
 
-export default function SearchBar({ onSearchFunc }) {
-	const [value, setValue] = useState("");
+export default function SearchBar({
+	onSearchFunc,
+	filteredCourses,
+	setFilteredCourses,
+}) {
+	const [searchQuery, setSearchQuery] = useState("");
 
-	const handleChangeText = (query) => {
-		setValue(query);
+	const handleSearch = (text) => {
+		setSearchQuery(text);
+		if (text) {
+			const newData = filteredCourses.filter((item) => {
+				const itemData = item.title ? item.title : "";
+				const textData = text;
+				return itemData.indexOf(textData) > -1;
+			});
+			setFilteredCourses(newData);
+		} else {
+			setFilteredCourses(courses);
+		}
 	};
 
 	return (
 		<View>
 			<TextInput
 				style={styles.searchInput}
+				value={searchQuery}
 				placeholder="گەڕان بۆ وانە..."
-				value={value}
-				onChangeText={handleChangeText}
+				onChangeText={handleSearch}
 			/>
 			<Pressable onPress={onSearchFunc}>
 				<Text>SEARCH</Text>
