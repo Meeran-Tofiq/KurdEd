@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Image, View, Text } from "react-native";
-import SkipIntroButton from "../components/SkipIntroButton";
+import SkipButton from "../components/SkipButton";
 import img1 from "../../assets/globe-smiling.png";
 import img2 from "../../assets/magnifying-glass.png";
 import img3 from "../../assets/shooting-rocket.png";
@@ -27,7 +27,7 @@ export default function Intro({}) {
 	return (
 		<View>
 			{/* ^this will be the container of the entire intro 1*/}
-			<SkipIntroButton />
+			<SkipButton />
 			<View>
 				<Image source={images[pageNo]} />
 			</View>
