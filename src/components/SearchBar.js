@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, TextInput, StyleSheet, Pressable } from "react-native";
+import { View, TextInput, StyleSheet, Pressable, Text } from "react-native";
 
 export default function SearchBar({ onSearchFunc }) {
 	const [value, setValue] = useState("");
@@ -16,7 +16,9 @@ export default function SearchBar({ onSearchFunc }) {
 				value={value}
 				onChangeText={handleChangeText}
 			/>
-			<Pressable onPress={onSearchFunc} title="SEARCH"></Pressable>
+			<Pressable onPress={onSearchFunc}>
+				<Text>SEARCH</Text>
+			</Pressable>
 		</View>
 	);
 }
