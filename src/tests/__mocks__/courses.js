@@ -16,7 +16,7 @@ const courses = [
 			hours: 10,
 			minutes: 34,
 		},
-		img: img,
+		img: courseImage,
 	},
 	{
 		title: "بیرکاری - مامۆستا ئەحمەد",
@@ -25,7 +25,7 @@ const courses = [
 			hours: 10,
 			minutes: 34,
 		},
-		img: img,
+		img: courseImage,
 	},
 	{
 		title: "بیرکاری - مامۆستا ئەحمەد",
@@ -34,7 +34,7 @@ const courses = [
 			hours: 10,
 			minutes: 34,
 		},
-		img: img,
+		img: courseImage,
 	},
 ];
 
