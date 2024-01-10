@@ -29,7 +29,7 @@ export default function CourseCard({ course, hasSubscribed }) {
 			</View>
 			<View>
 				<Text>
-					{course.duration.minutes} خولەک {course.duration.hours} کاتژمێر
+					{course.duration.hours} کاتژمێر و {course.duration.minutes} خولەک
 				</Text>
 				<Text>{course.title}</Text>
 				<Text>{course.desc}</Text>
