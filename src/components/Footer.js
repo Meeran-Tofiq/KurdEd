@@ -47,6 +47,7 @@ const styles = StyleSheet.create({
 		paddingTop: 12,
 		justifyContent: "space-around",
 		alignItems: "center",
+		backgroundColor: "white",
 	},
 	text: {
 		fontSize: 16,

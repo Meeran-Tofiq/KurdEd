@@ -7,6 +7,7 @@ import SearchBar from "../components/SearchBar";
 import Footer from "../components/Footer";
 
 export default function CoursesScreen({ navigation }) {
+	const [filteredCourses, setFilteredCourses] = useState(courses);
 	const [selectedScreen, setSelectedScreen] = useState(1);
 	const hasSubscribed = true;
 
@@ -14,7 +15,10 @@ export default function CoursesScreen({ navigation }) {
 		<View>
 			<View>
 				<WelcomeHeader />
-				<SearchBar />
+				<SearchBar
+					filteredCourses={filteredCourses}
+					setFilteredCourses={setFilteredCourses}
+				/>
 			</View>
 			<View>
 				<Text>وانەی پێشنیار کراو :</Text>
@@ -24,7 +28,7 @@ export default function CoursesScreen({ navigation }) {
 					renderItem={({ item: course }) => (
 						<CourseCard course={course} hasSubscribed={hasSubscribed} />
 					)}
-					data={courses}
+					data={filteredCourses}
 					style={styles.flatlist}
 				/>
 			</View>
