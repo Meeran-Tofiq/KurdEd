@@ -3,13 +3,17 @@ import { View, Image, Text, FlatList, StyleSheet } from "react-native";
 import CourseCard from "../components/CourseCard";
 import courses from "../tests/__mocks__/courses";
 import WelcomeHeader from "../components/WelcomeHeader";
+import SearchBar from "../components/SearchBar";
 
 export default function CoursesScreen() {
 	const hasSubscribed = true;
 
 	return (
 		<View>
-			<WelcomeHeader />
+			<View>
+				<WelcomeHeader />
+				<SearchBar />
+			</View>
 			<FlatList
 				renderItem={({ item: course }) => (
 					<CourseCard course={course} hasSubscribed={hasSubscribed} />
