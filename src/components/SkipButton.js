@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, Pressable, Text } from "react-native";
 
-export default function SkipIntroButton({ onPressFunc, extraStyles }) {
+export default function SkipButton({ onPressFunc, extraStyles }) {
 	return (
 		<Pressable onPress={onPressFunc} styles={[styles.button, extraStyles]}>
 			<Text>پەڕاندن</Text>
