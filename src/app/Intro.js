@@ -6,7 +6,7 @@ import img2 from "../../assets/magnifying-glass.png";
 import img3 from "../../assets/shooting-rocket.png";
 import ContinueButton from "../components/ContinueButton";
 
-export default function Intro({}) {
+export default function Intro({ navigation }) {
 	const [pageNo, setPageNo] = useState(0);
 	const images = [img1, img2, img3];
 	const titles = [
@@ -22,12 +22,13 @@ export default function Intro({}) {
 
 	const handleIncreasingPage = () => {
 		if (pageNo < images.length - 1) setPageNo(pageNo + 1);
+		else navigation.navigate("Courses");
 	};
 
 	return (
 		<View>
 			{/* ^this will be the container of the entire intro 1*/}
-			<SkipButton />
+			<SkipButton onPressFunc={() => navigation.navigate("Courses")} />
 			<View>
 				<Image source={images[pageNo]} />
 			</View>
