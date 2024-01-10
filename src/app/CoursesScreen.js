@@ -14,6 +14,9 @@ export default function CoursesScreen() {
 				<WelcomeHeader />
 				<SearchBar />
 			</View>
+			<View>
+				<Text>وانەی پێشنیار کراو :</Text>
+			</View>
 			<FlatList
 				renderItem={({ item: course }) => (
 					<CourseCard course={course} hasSubscribed={hasSubscribed} />
