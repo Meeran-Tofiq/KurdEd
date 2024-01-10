@@ -15,7 +15,7 @@ export default function App() {
 					headerShown: false,
 				}}
 			>
-				<Stack.Screen name="Home" component={SplashScreen} />
+				<Stack.Screen name="Splash Screen" component={SplashScreen} />
 				<Stack.Screen name="Intro Pages" component={Intro} />
 				<Stack.Screen name="Courses" component={CoursesScreen} />
 			</Stack.Navigator>
