@@ -28,7 +28,7 @@ const courses = [
 		img: courseImage,
 	},
 	{
-		title: "بیرکاری - مامۆستا ئەحمەد",
+		title: "زانست بۆ هەمووان - مامۆستا میران",
 		desc: "داتاشراوە و تەواوکاری",
 		duration: {
 			hours: 10,
