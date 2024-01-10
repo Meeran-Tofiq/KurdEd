@@ -1,18 +1,18 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { Pressable, StyleSheet, Text, View } from "react-native";
 
 export default function Footer({ navigation }) {
 	return (
 		<View style={styles.footer}>
-			<View style={styles.classesContainer}>
+			<Pressable style={styles.classesContainer}>
 				<Text style={styles.classes}>وانەکان</Text>
-			</View>
-			<View style={styles.profileContainer}>
+			</Pressable>
+			<Pressable style={styles.profileContainer}>
 				<Text style={styles.profile}>پڕۆفایل</Text>
-			</View>
-			<View style={styles.settingsContainer}>
+			</Pressable>
+			<Pressable style={styles.settingsContainer}>
 				<Text style={styles.settings}>ڕێکبەندییەکان</Text>
-			</View>
+			</Pressable>
 		</View>
 	);
 }
