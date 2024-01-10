@@ -1,4 +1,4 @@
-import courseImage from "../../../assets/course-image-1.png";
+import courseImage from "../../../assets/cool-kids-discussion.png";
 
 /**
  * @typedef {Object} course
