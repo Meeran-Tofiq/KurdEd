@@ -51,5 +51,7 @@ const styles = StyleSheet.create({
 	searchInput: {
 		flex: 1,
 	},
-	searchButton: {},
+	searchButton: {
+		marginHorizontal: 5,
+	},
 });
