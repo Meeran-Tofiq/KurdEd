@@ -28,7 +28,7 @@ export default function IntroScreen({ navigation }) {
 	return (
 		<View style={styles.container}>
 			{/* ^this will be the container of the entire intro 1*/}
-			<SkipButton onPressFunc={() => navigation.navigate("Courses")} />
+			<SkipButton onPressFunc={() => navigation.navigate("Login Page")} />
 			<View style={styles.imageContainer}>
 				<Image source={images[pageNo]} />
 			</View>
