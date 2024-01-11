@@ -21,11 +21,14 @@ export default function CourseCard({ course, hasSubscribed }) {
 		<View style={styles.courseCard}>
 			<View
 				style={
-					hasSubscribed ? styles.imageContainer : styles.lockedImageContainer
+					hasSubscribed
+						? styles.imageContainer
+						: [styles.imageContainer, styles.locked]
 				}
 			>
 				{/* Fotn Awesome Lock icon goes here */}
 				<Image source={course.img} style={styles.courseImage} />
+				{!hasSubscribed && <View style={styles.overlay} />}
 			</View>
 			<View style={styles.courseInfoContainer}>
 				<Text style={styles.durationText}>
@@ -44,26 +47,28 @@ const styles = StyleSheet.create({
 		borderColor: "grey",
 		borderRadius: 15,
 		marginVertical: 15,
+		overflow: "hidden",
 	},
 	courseImage: {
 		width: "100%",
 		height: 180,
 	},
-	lockedImageContainer: {
-		padding: 15,
-		color: "#F8F2EE",
+	locked: {
+		opacity: 0.5,
 	},
 	imageContainer: {
 		padding: 15,
-		color: "#F8F2EE",
+		backgroundColor: "#F8F2EE",
+	},
+	overlay: {
+		...StyleSheet.absoluteFillObject,
+		backgroundColor: "rgba(0, 0, 0, 0.75)",
 	},
 	courseInfoContainer: {
 		padding: 10,
 		backgroundColor: "white",
 		borderBottomLeftRadius: 15,
 		borderBottomRightRadius: 15,
-		borderBottomColor: "grey",
-		borderBottomWidth: 0.25,
 		alignItems: "flex-end",
 	},
 	durationText: {
