@@ -3,7 +3,7 @@ import { StyleSheet, Pressable, Text } from "react-native";
 
 export default function SkipButton({ onPressFunc, extraStyles }) {
 	return (
-		<Pressable onPress={onPressFunc} styles={[styles.button, extraStyles]}>
+		<Pressable onPress={onPressFunc} style={[styles.button, extraStyles]}>
 			<Text>پەڕاندن</Text>
 		</Pressable>
 	);
