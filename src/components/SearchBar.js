@@ -24,14 +24,14 @@ export default function SearchBar({
 	};
 
 	return (
-		<View>
+		<View style={styles.searchBar}>
 			<TextInput
 				style={styles.searchInput}
 				value={searchQuery}
 				placeholder="گەڕان بۆ وانە..."
 				onChangeText={handleSearch}
 			/>
-			<Pressable onPress={onSearchFunc}>
+			<Pressable onPress={onSearchFunc} style={styles.searchButton}>
 				<Text>SEARCH</Text>
 			</Pressable>
 		</View>
@@ -39,5 +39,17 @@ export default function SearchBar({
 }
 
 const styles = StyleSheet.create({
-	searchInput: {},
+	searchBar: {
+		borderRadius: 12,
+		borderWidth: 1,
+		padding: 10,
+		flexDirection: "row-reverse",
+		borderColor: "rgba(190, 186, 179, 1)",
+		alignItems: "center",
+		justifyContent: "space-between",
+	},
+	searchInput: {
+		flex: 1,
+	},
+	searchButton: {},
 });
