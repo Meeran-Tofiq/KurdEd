@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { Image, View, Text } from "react-native";
+import { Image, View, Text, StyleSheet } from "react-native";
 import SkipButton from "../components/SkipButton";
 import img1 from "../../assets/globe-smiling.png";
 import img2 from "../../assets/magnifying-glass.png";
 import img3 from "../../assets/shooting-rocket.png";
 import ContinueButton from "../components/ContinueButton";
 
-export default function Intro({ navigation }) {
+export default function IntroScreen({ navigation }) {
 	const [pageNo, setPageNo] = useState(0);
 	const images = [img1, img2, img3];
 	const titles = [
@@ -26,17 +26,27 @@ export default function Intro({ navigation }) {
 	};
 
 	return (
-		<View>
+		<View style={styles.container}>
 			{/* ^this will be the container of the entire intro 1*/}
-			<SkipButton onPressFunc={() => navigation.navigate("Courses")} />
-			<View>
+			<SkipButton onPressFunc={() => navigation.navigate("Login Page")} />
+			<View style={styles.imageContainer}>
 				<Image source={images[pageNo]} />
 			</View>
-			<View>
-				<Text>{titles[pageNo]}</Text>
-				<Text>{descs[pageNo]}</Text>
+			<View style={styles.textContaienr}>
+				<Text style={styles.title}>{titles[pageNo]}</Text>
+				<Text style={styles.desc}>{descs[pageNo]}</Text>
 			</View>
-			<View>{/* pagination space */}</View>
+			<View style={styles.paginationContainer}>
+				<View
+					style={[styles.paginationItem, pageNo === 1 && styles.activePill]}
+				></View>
+				<View
+					style={[styles.paginationItem, pageNo === 2 && styles.activePill]}
+				></View>
+				<View
+					style={[styles.paginationItem, pageNo === 3 && styles.activePill]}
+				></View>
+			</View>
 			<ContinueButton
 				label={pageNo < 2 ? "دواتر" : "با بخوێنین!"}
 				onPressFunc={handleIncreasingPage}
@@ -44,3 +54,43 @@ export default function Intro({ navigation }) {
 		</View>
 	);
 }
+
+const styles = StyleSheet.create({
+	container: {
+		flex: 1,
+		alignItems: "center",
+		justifyContent: "center",
+		gap: 30,
+	},
+	imageContainer: {},
+	textContaienr: {
+		alignItems: "center",
+	},
+	title: {
+		fontSize: 24,
+		fontWeight: "700",
+		textAlign: "center",
+	},
+	desc: {
+		alignItems: "center",
+		textAlign: "center",
+	},
+	paginationContainer: {
+		flexDirection: "row",
+		justifyContent: "center",
+		alignItems: "center",
+		marginTop: 20,
+		backgroundColor: "red",
+	},
+	paginationItem: {
+		width: 12,
+		height: 12,
+		borderRadius: 6,
+		backgroundColor: "gray",
+		marginHorizontal: 5,
+	},
+	activePill: {
+		borderRadius: 8,
+		width: 20,
+	},
+});

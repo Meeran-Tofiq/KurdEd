@@ -19,7 +19,7 @@ export default function App() {
 				}}
 			>
 				<Stack.Screen name="Splash Screen" component={SplashScreen} />
-				<Stack.Screen name="Intro Pages" component={Intro} />
+				<Stack.Screen name="Intro Pages" component={IntroScreen} />
 				<Stack.Screen name="Courses" component={CoursesScreen} />
 				<Stack.Screen name="Login Page" component={LoginScreen} />
 				<Stack.Screen name="Profile Screen" component={ProfileScreen} />
