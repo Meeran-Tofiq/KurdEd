@@ -1,7 +1,8 @@
 import React from "react";
-import { VIew, Image, Text, FlatList } from "react-native";
+import { View, Image, Text, FlatList, StyleSheet } from "react-native";
 import img from "../../assets/cool-kids-on-wheels.png";
 import Footer from "../components/Footer";
+import SettingsOptions from "../components/SettingsOptions";
 
 export default function SettingsScreen({}) {
 	return (
@@ -11,8 +12,10 @@ export default function SettingsScreen({}) {
 				<Text style={styles.headerText}>ڕێکبەندییەکان</Text>
 			</View>
 			<Image source={img} style={styles.image} />
-			<FlatList />
+			<SettingsOptions />
 			<Footer />
 		</View>
 	);
 }
+
+const styles = StyleSheet.create({});
