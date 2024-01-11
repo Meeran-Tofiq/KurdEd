@@ -28,6 +28,7 @@ export default function CourseCard({ course, hasSubscribed }) {
 			>
 				{/* Fotn Awesome Lock icon goes here */}
 				<Image source={course.img} style={styles.courseImage} />
+				{!hasSubscribed && <View style={styles.overlay} />}
 			</View>
 			<View style={styles.courseInfoContainer}>
 				<Text style={styles.durationText}>
@@ -53,12 +54,15 @@ const styles = StyleSheet.create({
 		height: 180,
 	},
 	locked: {
-		padding: 15,
-		color: "#F8F2EE",
+		opacity: 0.5,
 	},
 	imageContainer: {
 		padding: 15,
 		backgroundColor: "#F8F2EE",
+	},
+	overlay: {
+		...StyleSheet.absoluteFillObject,
+		backgroundColor: "rgba(0, 0, 0, 0.75)",
 	},
 	courseInfoContainer: {
 		padding: 10,
