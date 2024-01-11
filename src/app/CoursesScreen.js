@@ -24,15 +24,13 @@ export default function CoursesScreen({ navigation }) {
 					/>
 					<Text style={styles.suggestionText}>وانەی پێشنیار کراو:</Text>
 				</View>
-				<View>
-					<FlatList
-						renderItem={({ item: course }) => (
-							<CourseCard course={course} hasSubscribed={hasSubscribed} />
-						)}
-						data={filteredCourses}
-						style={styles.flatlist}
-					/>
-				</View>
+				<FlatList
+					renderItem={({ item: course }) => (
+						<CourseCard course={course} hasSubscribed={hasSubscribed} />
+					)}
+					data={filteredCourses}
+					style={styles.flatlist}
+				/>
 			</View>
 			<View>
 				<Footer
@@ -56,7 +54,6 @@ const styles = StyleSheet.create({
 		width: "100%",
 		justifyContent: "flex-end",
 		gap: 15,
-		marginBottom: 15,
 	},
 	headerContainer: {
 		width: "100%",
