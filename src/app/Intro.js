@@ -22,7 +22,7 @@ export default function Intro({ navigation }) {
 
 	const handleIncreasingPage = () => {
 		if (pageNo < images.length - 1) setPageNo(pageNo + 1);
-		else navigation.navigate("Courses");
+		else navigation.navigate("Login Page");
 	};
 
 	return (
