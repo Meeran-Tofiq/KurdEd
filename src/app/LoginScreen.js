@@ -5,8 +5,6 @@ import woman from "../../assets/kurdish-woman-holding-book.png";
 import facebookLogo from "../../assets/facebook-logo.png";
 import instagramLogo from "../../assets/instagram-logo.png";
 import googleLogo from "../../assets/google-logo.png";
-import loginLogo from "../../assets/login-logo.png";
-import alternateLoginLogo from "../../assets/alternate-login-text.png";
 import TextField from "../components/TextField";
 import ContinueButton from "../components/ContinueButton";
 
