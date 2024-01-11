@@ -10,8 +10,8 @@ function SettingsOption({ isNotif, settingOption, handleChangeFunc }) {
 			<View style={styles.container}>
 				<Text>ئاگادارکردنەوە</Text>
 				<Switch
-					trackColor={{ false: "#767577", true: "#81b0ff" }}
-					thumbColor={isEnabled ? "#5BA092" : "#f4f3f4"}
+					trackColor={{ false: "#767577", true: "#5BA092" }}
+					thumbColor={isEnabled ? "#f4f3f4" : "#f4f3f4"}
 					ios_backgroundColor="#3e3e3e"
 					onValueChange={() => {
 						handleChangeFunc();
@@ -23,12 +23,13 @@ function SettingsOption({ isNotif, settingOption, handleChangeFunc }) {
 		);
 	}
 
+	console.log("hello");
 	return (
 		<View style={styles.container}>
 			{/* Icon goes here */}
 			<View style={styles.textContainer}>
-				<Text style={styles.settingsTitle}></Text>
-				<Text style={styles.settingsDesc}></Text>
+				<Text style={styles.settingsTitle}>{settingOption.title}</Text>
+				<Text style={styles.settingsDesc}>{settingOption.desc}</Text>
 			</View>
 			{/* Arrow goes here */}
 		</View>
@@ -82,25 +83,24 @@ export default function SettingsOptions({ account }) {
 		{
 			id: "0",
 			title: "ئاگادارکردنەوە",
-			description: "Toggle notifications",
 			handleChangeFunc: handleNotifChange,
 		},
 		{
 			id: "1",
 			title: "ناو",
-			description: "دیلان ئەحمەد میران محەمەد",
+			desc: "دیلان ئەحمەد میران محەمەد",
 			handleChangeFunc: handleNameChange,
 		},
 		{
 			id: "2",
 			title: "ئیمەیڵ",
-			description: "dilan123@gmail.com",
+			desc: "dilan123@gmail.com",
 			handleChangeFunc: handleEmailChange,
 		},
 		{
 			id: "3",
 			title: "پاسۆرد",
-			description: "٢ هەفتە لەمەوپێش گۆڕاوە",
+			desc: "٢ هەفتە لەمەوپێش گۆڕاوە",
 			handleChangeFunc: handlePasswordChange,
 		},
 	];
@@ -116,6 +116,7 @@ export default function SettingsOptions({ account }) {
 					handleChangeFunc={item.handleChangeFunc}
 				/>
 			)}
+			style={styles.flatList}
 		/>
 	);
 }
