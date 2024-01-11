@@ -8,7 +8,6 @@ import Footer from "../components/Footer";
 
 export default function CoursesScreen({ navigation }) {
 	const [filteredCourses, setFilteredCourses] = useState(courses);
-	const [selectedScreen, setSelectedScreen] = useState(1);
 	const hasSubscribed = true;
 
 	return (
@@ -33,11 +32,7 @@ export default function CoursesScreen({ navigation }) {
 				/>
 			</View>
 			<View>
-				<Footer
-					navigation={navigation}
-					selectedScreen={selectedScreen}
-					setSelectedScreen={setSelectedScreen}
-				/>
+				<Footer navigation={navigation} selectedScreen={1} />
 			</View>
 		</View>
 	);
