@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Image, View, Text } from "react-native";
+import { Image, View, Text, StyleSheet } from "react-native";
 import SkipButton from "../components/SkipButton";
 import img1 from "../../assets/globe-smiling.png";
 import img2 from "../../assets/magnifying-glass.png";
@@ -26,15 +26,15 @@ export default function Intro({ navigation }) {
 	};
 
 	return (
-		<View>
+		<View style={styles.container}>
 			{/* ^this will be the container of the entire intro 1*/}
 			<SkipButton onPressFunc={() => navigation.navigate("Courses")} />
-			<View>
+			<View style={styles.imageContainer}>
 				<Image source={images[pageNo]} />
 			</View>
-			<View>
-				<Text>{titles[pageNo]}</Text>
-				<Text>{descs[pageNo]}</Text>
+			<View style={styles.textContaienr}>
+				<Text style={styles.title}>{titles[pageNo]}</Text>
+				<Text style={styles.desc}>{descs[pageNo]}</Text>
 			</View>
 			<View>{/* pagination space */}</View>
 			<ContinueButton
@@ -44,3 +44,25 @@ export default function Intro({ navigation }) {
 		</View>
 	);
 }
+
+const styles = StyleSheet.create({
+	container: {
+		flex: 1,
+		alignItems: "center",
+		justifyContent: "center",
+		gap: 30,
+	},
+	imageContainer: {},
+	textContaienr: {
+		alignItems: "center",
+	},
+	title: {
+		fontSize: 24,
+		fontWeight: "700",
+		alignItems: "center",
+	},
+	desc: {
+		alignItems: "center",
+		textAlign: "center",
+	},
+});
