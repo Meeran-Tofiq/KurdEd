@@ -38,13 +38,13 @@ export default function IntroScreen({ navigation }) {
 			</View>
 			<View style={styles.paginationContainer}>
 				<View
+					style={[styles.paginationItem, pageNo === 0 && styles.activePill]}
+				></View>
+				<View
 					style={[styles.paginationItem, pageNo === 1 && styles.activePill]}
 				></View>
 				<View
 					style={[styles.paginationItem, pageNo === 2 && styles.activePill]}
-				></View>
-				<View
-					style={[styles.paginationItem, pageNo === 3 && styles.activePill]}
 				></View>
 			</View>
 			<ContinueButton
