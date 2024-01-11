@@ -2,7 +2,7 @@ import { StyleSheet, Text, View } from "react-native";
 import SplashScreen from "./app/SplashScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import Intro from "./app/Intro";
+import IntroScreen from "./app/IntroScreen";
 import CoursesScreen from "./app/CoursesScreen";
 import LoginScreen from "./app/LoginScreen";
 import ProfileScreen from "./app/ProfileScreen";
@@ -19,7 +19,7 @@ export default function App() {
 				}}
 			>
 				<Stack.Screen name="Splash Screen" component={SplashScreen} />
-				<Stack.Screen name="Intro Pages" component={Intro} />
+				<Stack.Screen name="Intro Pages" component={IntroScreen} />
 				<Stack.Screen name="Courses" component={CoursesScreen} />
 				<Stack.Screen name="Login Page" component={LoginScreen} />
 				<Stack.Screen name="Profile Screen" component={ProfileScreen} />

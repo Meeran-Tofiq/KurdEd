@@ -6,7 +6,7 @@ import img2 from "../../assets/magnifying-glass.png";
 import img3 from "../../assets/shooting-rocket.png";
 import ContinueButton from "../components/ContinueButton";
 
-export default function Intro({ navigation }) {
+export default function IntroScreen({ navigation }) {
 	const [pageNo, setPageNo] = useState(0);
 	const images = [img1, img2, img3];
 	const titles = [
