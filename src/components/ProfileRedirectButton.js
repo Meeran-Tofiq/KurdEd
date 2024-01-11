@@ -11,11 +11,22 @@ export default function ProfileRedirectButton({
 			style={styles.redirectBtn}
 			onPress={() => navigation.navigate(redirectLink)}
 		>
-			<Text>{label}</Text>
+			<Text style={styles.btnText}>{label}</Text>
 		</Pressable>
 	);
 }
 
 const styles = StyleSheet.create({
-	redirectBtn: {},
+	redirectBtn: {
+		borderRadius: 15,
+		borderWidth: 1,
+		borderColor: "grey",
+		padding: 25,
+		width: "80%",
+		alignItems: "center",
+	},
+	btnText: {
+		fontSize: 22,
+		fontWeight: "700",
+	},
 });
