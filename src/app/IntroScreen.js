@@ -80,7 +80,6 @@ const styles = StyleSheet.create({
 		justifyContent: "center",
 		alignItems: "center",
 		marginTop: 20,
-		backgroundColor: "red",
 	},
 	paginationItem: {
 		width: 12,
@@ -92,5 +91,6 @@ const styles = StyleSheet.create({
 	activePill: {
 		borderRadius: 8,
 		width: 20,
+		backgroundColor: "#65AAEA",
 	},
 });
