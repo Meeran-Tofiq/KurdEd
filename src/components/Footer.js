@@ -12,21 +12,36 @@ export default function Footer({
 
 	return (
 		<View style={styles.footer}>
-			<Pressable style={styles.classesContainer} onPress={() => handlePress(1)}>
-				<Text style={selectedScreen === 1 ? styles.selectedText : styles.text}>
+			<Pressable style={styles.container} onPress={() => handlePress(1)}>
+				<Text
+					style={
+						selectedScreen === 1
+							? [styles.text, { color: "#E3562A" }]
+							: styles.text
+					}
+				>
 					وانەکان
 				</Text>
 			</Pressable>
-			<Pressable style={styles.profileContainer} onPress={() => handlePress(2)}>
-				<Text style={selectedScreen === 2 ? styles.selectedText : styles.text}>
+			<Pressable style={styles.container} onPress={() => handlePress(2)}>
+				<Text
+					style={
+						selectedScreen === 2
+							? [styles.text, { color: "#E3562A" }]
+							: styles.text
+					}
+				>
 					پڕۆفایل
 				</Text>
 			</Pressable>
-			<Pressable
-				style={styles.settingsContainer}
-				onPress={() => handlePress(3)}
-			>
-				<Text style={selectedScreen === 3 ? styles.selectedText : styles.text}>
+			<Pressable style={styles.container} onPress={() => handlePress(3)}>
+				<Text
+					style={
+						selectedScreen === 3
+							? [styles.text, { color: "#E3562A" }]
+							: styles.text
+					}
+				>
 					ڕێکبەندییەکان
 				</Text>
 			</Pressable>
@@ -37,7 +52,7 @@ export default function Footer({
 const styles = StyleSheet.create({
 	footer: {
 		position: "absolute",
-		bottom: 0,
+		bottom: -25,
 		flexDirection: "row-reverse",
 		height: 102,
 		width: "100%",
@@ -57,5 +72,10 @@ const styles = StyleSheet.create({
 		fontSize: 16,
 		color: "#E3562A",
 	},
-	container: {},
+	container: {
+		height: "100%",
+		justifyContent: "center",
+		alignItems: "center",
+		width: "33%",
+	},
 });
