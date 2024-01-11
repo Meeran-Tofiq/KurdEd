@@ -1,11 +1,7 @@
 import React from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 
-export default function Footer({
-	navigation,
-	selectedScreen,
-	setSelectedScreen,
-}) {
+export default function Footer({ navigation, selectedScreen }) {
 	const pages = ["Courses", "Profile Screen", "Settings Screen"];
 
 	const handlePress = (num) => {
