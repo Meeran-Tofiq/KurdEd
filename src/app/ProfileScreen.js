@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Image, Text } from "react-native";
+import { View, Image, Text, StyleSheet } from "react-native";
 import img from "../../assets/cool-kids-smile.png";
 import Footer from "../components/Footer";
 
@@ -11,3 +11,5 @@ export default function ProfileScreen({ navigation }) {
 		</View>
 	);
 }
+
+const styles = StyleSheet.create({});
