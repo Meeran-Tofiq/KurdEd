@@ -19,7 +19,7 @@ const courses = [
 		img: courseImage,
 	},
 	{
-		title: "بیرکاری - مامۆستا ئەحمەد",
+		title: "Sunrise - مامۆستا ئەحمەد",
 		desc: "داتاشراوە و تەواوکاری",
 		duration: {
 			hours: 10,

@@ -7,41 +7,59 @@ import SearchBar from "../components/SearchBar";
 import Footer from "../components/Footer";
 
 export default function CoursesScreen({ navigation }) {
-	const [selectedScreen, setSelectedScreen] = useState(1);
+	const [filteredCourses, setFilteredCourses] = useState(courses);
 	const hasSubscribed = true;
 
 	return (
 		<View>
-			<View>
-				<WelcomeHeader />
-				<SearchBar />
-			</View>
-			<View>
-				<Text>وانەی پێشنیار کراو :</Text>
-			</View>
-			<View>
+			<View style={styles.content}>
+				<View style={styles.header}>
+					<View style={styles.headerContainer}>
+						<WelcomeHeader />
+					</View>
+					<SearchBar
+						filteredCourses={filteredCourses}
+						setFilteredCourses={setFilteredCourses}
+					/>
+					<Text style={styles.suggestionText}>وانەی پێشنیار کراو:</Text>
+				</View>
 				<FlatList
 					renderItem={({ item: course }) => (
 						<CourseCard course={course} hasSubscribed={hasSubscribed} />
 					)}
-					data={courses}
+					data={filteredCourses}
 					style={styles.flatlist}
 				/>
 			</View>
 			<View>
-				<Footer
-					navigation={navigation}
-					selectedScreen={selectedScreen}
-					setSelectedScreen={setSelectedScreen}
-				/>
+				<Footer navigation={navigation} selectedScreen={1} />
 			</View>
 		</View>
 	);
 }
 
 const styles = StyleSheet.create({
+	content: {
+		height: "100%",
+		padding: 15,
+		alignItems: "center",
+		paddingBottom: 75,
+	},
+	header: {
+		height: "25%",
+		width: "100%",
+		justifyContent: "flex-end",
+		gap: 15,
+	},
+	headerContainer: {
+		width: "100%",
+		flexDirection: "row-reverse",
+		alignItems: "center",
+	},
+	suggestionText: {
+		textAlign: "center",
+	},
 	flatlist: {
-		width: "auto",
-		height: 700,
+		width: "100%",
 	},
 });
