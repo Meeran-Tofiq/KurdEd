@@ -11,7 +11,7 @@ export default function ProfileRedirectButton({
 			style={styles.redirectBtn}
 			onPress={() => navigation.navigate(redirectLink)}
 		>
-			{label}
+			<Text>{label}</Text>
 		</Pressable>
 	);
 }
