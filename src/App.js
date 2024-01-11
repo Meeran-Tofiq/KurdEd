@@ -2,7 +2,7 @@ import { StyleSheet, Text, View } from "react-native";
 import SplashScreen from "./app/SplashScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import Intro from "./app/Intro";
+import IntroScreen from "./app/IntroScreen";
 import CoursesScreen from "./app/CoursesScreen";
 import LoginScreen from "./app/LoginScreen";
 import ProfileScreen from "./app/ProfileScreen";
