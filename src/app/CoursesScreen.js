@@ -45,8 +45,8 @@ export default function CoursesScreen({ navigation }) {
 
 const styles = StyleSheet.create({
 	content: {
+		flex: 1,
 		padding: 15,
-		height: "100%",
 		alignItems: "center",
 		paddingBottom: 75,
 	},
