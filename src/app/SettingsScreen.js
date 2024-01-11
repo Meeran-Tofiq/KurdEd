@@ -13,7 +13,7 @@ export default function SettingsScreen({ navigation }) {
 			</View>
 			<Image source={img} style={styles.image} />
 			<SettingsOptions />
-			<Footer navigation={navigation} />
+			<Footer navigation={navigation} selectedScreen={3} />
 		</View>
 	);
 }
