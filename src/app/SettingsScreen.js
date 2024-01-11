@@ -4,7 +4,7 @@ import img from "../../assets/cool-kids-on-wheels.png";
 import Footer from "../components/Footer";
 import SettingsOptions from "../components/SettingsOptions";
 
-export default function SettingsScreen({}) {
+export default function SettingsScreen({ navigation }) {
 	return (
 		<View style={styles.container}>
 			<View style={styles.header}>
@@ -13,14 +13,26 @@ export default function SettingsScreen({}) {
 			</View>
 			<Image source={img} style={styles.image} />
 			<SettingsOptions />
-			<Footer />
+			<Footer navigation={navigation} />
 		</View>
 	);
 }
 
 const styles = StyleSheet.create({
+	container: {
+		flex: 1,
+		alignItems: "center",
+		marginTop: "10%",
+		paddingBottom: 75,
+	},
+	header: {
+		marginBottom: 20,
+	},
+	headerText: {
+		fontSize: 24,
+	},
 	image: {
-		height: 100,
-		width: 100,
+		height: 250,
+		width: 250,
 	},
 });
