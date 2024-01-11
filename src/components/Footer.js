@@ -52,7 +52,7 @@ export default function Footer({
 const styles = StyleSheet.create({
 	footer: {
 		position: "absolute",
-		bottom: 0,
+		bottom: -25,
 		flexDirection: "row-reverse",
 		height: 102,
 		width: "100%",
