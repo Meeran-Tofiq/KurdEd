@@ -48,6 +48,7 @@ const styles = StyleSheet.create({
 		padding: 15,
 		height: "100%",
 		alignItems: "center",
+		paddingBottom: 75,
 	},
 	header: {
 		height: "25%",
@@ -65,6 +66,5 @@ const styles = StyleSheet.create({
 	},
 	flatlist: {
 		width: "100%",
-		height: 700,
 	},
 });
