@@ -121,4 +121,18 @@ export default function SettingsOptions({ account }) {
 	);
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+	flatList: {
+		width: "95%",
+	},
+	container: {
+		padding: 15,
+		marginVertical: 10,
+		borderWidth: 1,
+		borderRadius: 15,
+		borderColor: "grey",
+		flexDirection: "row-reverse",
+		alignItems: "center",
+		justifyContent: "space-between",
+	},
+});
