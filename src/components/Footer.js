@@ -6,8 +6,11 @@ export default function Footer({
 	selectedScreen,
 	setSelectedScreen,
 }) {
+	const pages = ["Courses", "Profile Screen", "Settings Screen"];
+
 	const handlePress = (num) => {
 		setSelectedScreen(num);
+		navigation.navigate(pages[num - 1]);
 	};
 
 	return (
