@@ -21,7 +21,7 @@ export default function CoursesScreen({ navigation }) {
 						<CircularButton
 							image={graduationImage}
 							onPressFunc={() => {
-								navigation.navigate("Grade Selection Screen");
+								navigation.navigate("Year Selection Screen");
 							}}
 						/>
 					</View>
