@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { View, Image, Text, FlatList, StyleSheet } from "react-native";
 import CourseCard from "../components/CourseCard";
+import graduationImage from "../../assets/graduation-hat-small.png";
 import courses from "../tests/__mocks__/courses";
 import WelcomeHeader from "../components/WelcomeHeader";
 import SearchBar from "../components/SearchBar";
 import Footer from "../components/Footer";
+import CircularButton from "../components/CircularButton";
 
 export default function CoursesScreen({ navigation }) {
 	const [filteredCourses, setFilteredCourses] = useState(courses);
@@ -16,6 +18,12 @@ export default function CoursesScreen({ navigation }) {
 				<View style={styles.header}>
 					<View style={styles.headerContainer}>
 						<WelcomeHeader />
+						<CircularButton
+							image={graduationImage}
+							onPressFunc={() => {
+								navigation.navigate("Year Selection Screen");
+							}}
+						/>
 					</View>
 					<SearchBar
 						filteredCourses={filteredCourses}
@@ -42,6 +50,7 @@ const styles = StyleSheet.create({
 	content: {
 		height: "100%",
 		padding: 15,
+		paddingTop: 25,
 		alignItems: "center",
 		paddingBottom: 75,
 	},
@@ -55,6 +64,7 @@ const styles = StyleSheet.create({
 		width: "100%",
 		flexDirection: "row-reverse",
 		alignItems: "center",
+		justifyContent: "space-between",
 	},
 	suggestionText: {
 		textAlign: "center",
