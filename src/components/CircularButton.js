@@ -1,5 +1,5 @@
 import React from "react";
-import { Pressable, StyleSheet, View } from "react-native";
+import { Pressable, StyleSheet, Image } from "react-native";
 
 export default function CircularButton({
 	navigation,
@@ -9,16 +9,24 @@ export default function CircularButton({
 }) {
 	return (
 		<Pressable style={styles.circularBtn} onPress={onPressFunc}>
-			<Image source={image} />
+			<Image source={image} style={styles.image} resizeMode="contain" />
 		</Pressable>
 	);
 }
 
 const styles = StyleSheet.create({
 	circularBtn: {
-		position: "absolute",
-		top: "10%",
-		width: 48,
-		height: 48,
+		width: 58,
+		height: 58,
+		borderWidth: 1,
+		borderColor: "rgba(190, 186, 179, 1)",
+		borderRadius: 29,
+		overflow: "hidden",
+		padding: 5,
+	},
+	image: {
+		flex: 1,
+		width: null,
+		height: null,
 	},
 });
