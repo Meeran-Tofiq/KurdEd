@@ -1,8 +1,14 @@
-import React, { useState } from 'react';
-import { View, TextInput, StyleSheet } from 'react-native';
+import React, { useState } from "react";
+import { View, TextInput, StyleSheet } from "react-native";
 
-const TextField = ({ autoCapitalize, placeholder, secureTextEntry, extraStyles }) => {
-  const [text, setText] = useState('');
+const TextField = ({
+  autoCapitalize,
+  placeholder,
+  secureTextEntry,
+  extraStyles,
+  keyboardType,
+}) => {
+  const [text, setText] = useState("");
 
   const handleTextChange = (inputText) => {
     setText(inputText);
@@ -17,6 +23,7 @@ const TextField = ({ autoCapitalize, placeholder, secureTextEntry, extraStyles }
         autoCapitalize={autoCapitalize}
         placeholder={placeholder}
         secureTextEntry={secureTextEntry}
+        keyboardType={keyboardType}
       />
     </View>
   );
@@ -25,12 +32,12 @@ const TextField = ({ autoCapitalize, placeholder, secureTextEntry, extraStyles }
 const styles = StyleSheet.create({
   input: {
     height: 53,
-    borderColor: 'gray',
+    borderColor: "gray",
     borderWidth: 1,
     paddingHorizontal: 10,
-    width: '90%',
-    alignSelf: 'center',
-    borderRadius: 10
+    width: "90%",
+    alignSelf: "center",
+    borderRadius: 10,
   },
 });
 
