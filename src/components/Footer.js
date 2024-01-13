@@ -1,6 +1,6 @@
 import React from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
-import { CoursesSVG } from "./SVG";
+import { CoursesSVG, ProfileSVG } from "./SVG";
 
 export default function Footer({ navigation, selectedScreen }) {
 	const pages = ["Courses", "Profile Screen", "Settings Screen"];
@@ -24,6 +24,7 @@ export default function Footer({ navigation, selectedScreen }) {
 				</Text>
 			</Pressable>
 			<Pressable style={styles.container} onPress={() => handlePress(2)}>
+				<ProfileSVG />
 				<Text
 					style={
 						selectedScreen === 2
