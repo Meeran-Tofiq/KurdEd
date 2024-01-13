@@ -6,7 +6,10 @@ export default function CourseLessonsScreen({ navigation, route }) {
 	const { course } = route.params;
 
 	return (
-		<View style={styles.contaienr}>
+		<View style={styles.container}>
+			<View style={styles.header}>
+				<Text style={styles.title}>{course.title}</Text>
+			</View>
 			<FlatList
 				data={course.sections}
 				renderItem={({ item: section }) => (
@@ -21,4 +24,23 @@ export default function CourseLessonsScreen({ navigation, route }) {
 	);
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+	container: {
+		flex: 1,
+		alignItems: "center",
+		gap: 20,
+	},
+	header: {
+		borderBottomWidth: 1,
+		borderColor: "rgba(190, 186, 179, 1)",
+		width: "100%",
+		alignItems: "center",
+		padding: 15,
+		marginTop: "8%",
+	},
+	title: {
+		fontSize: 20,
+		width: "80%",
+		textAlign: "center",
+	},
+});
