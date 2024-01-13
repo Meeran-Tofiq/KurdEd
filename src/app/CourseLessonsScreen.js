@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FlatList, Pressable, StyleSheet, Text, View } from "react-native";
 import LessonDropDown from "../components/LessonDropDown";
+import BackButton from "../components/BackButton";
 
 export default function CourseLessonsScreen({ navigation, route }) {
 	const { course } = route.params;
@@ -8,6 +9,7 @@ export default function CourseLessonsScreen({ navigation, route }) {
 	return (
 		<View style={styles.container}>
 			<View style={styles.header}>
+				<BackButton navigation={navigation} />
 				<Text style={styles.title}>{course.title}</Text>
 			</View>
 			<FlatList
@@ -36,6 +38,8 @@ const styles = StyleSheet.create({
 		borderColor: "rgba(190, 186, 179, 1)",
 		width: "100%",
 		alignItems: "center",
+		justifyContent: "flex-start",
+		flexDirection: "row",
 		padding: 15,
 		marginTop: "8%",
 	},
