@@ -14,7 +14,11 @@ export default function LessonDropDown({ navigation, dropdownLabel, lessons }) {
 			</Pressable>
 
 			<View
-				style={isVisible ? styles.lessons : [styles.lessons, { height: 0 }]}
+				style={
+					isVisible
+						? styles.lessons
+						: [styles.lessons, { height: 0, opacity: 0 }]
+				}
 			>
 				{lessons.map((lesson, i) => {
 					return (
@@ -30,4 +34,23 @@ export default function LessonDropDown({ navigation, dropdownLabel, lessons }) {
 	);
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+	container: {
+		flex: 1,
+		paddingHorizontal: 15,
+		width: "100%",
+		alignItems: "center",
+		gap: 10,
+	},
+	dropdown: {
+		borderWidth: 1,
+		borderColor: "rgba(190, 186, 179, 1)",
+		borderRadius: 20,
+		padding: 15,
+		width: "100%",
+	},
+	lessons: {
+		width: "90%",
+		gap: 10,
+	},
+});
