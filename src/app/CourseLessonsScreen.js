@@ -9,6 +9,7 @@ export default function CourseLessonsScreen({ navigation, course }) {
 				data={course.sections}
 				renderItem={({ item: section }) => (
 					<LessonDropDown
+						navigation={navigation}
 						dropdownLabel={section.label}
 						lessonSection={section}
 					/>
