@@ -4,7 +4,6 @@ import { View, Text, FlatList, Switch, StyleSheet } from "react-native";
 function SettingsOption({ isNotif, settingOption, handleChangeFunc }) {
 	const [isEnabled, setIsEnable] = useState(false);
 
-	console.log(settingOption);
 	if (isNotif) {
 		return (
 			<View style={styles.container}>
@@ -23,7 +22,6 @@ function SettingsOption({ isNotif, settingOption, handleChangeFunc }) {
 		);
 	}
 
-	console.log("hello");
 	return (
 		<View style={styles.container}>
 			{/* Icon goes here */}
