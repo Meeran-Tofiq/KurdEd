@@ -9,7 +9,7 @@ import RegistrationScreen from "./app/RegistrationScreen";
 import PlanScreen from "./app/PlanScreen";
 import ProfileScreen from "./app/ProfileScreen";
 import SettingsScreen from "./app/SettingsScreen";
-import YearSelectionScreen from "./app/YearSelectionContainer";
+import YearSelectionScreen from "./app/YearSelectionScreen";
 import CourseLessonsScreen from "./app/CourseLessonsScreen";
 
 const Stack = createNativeStackNavigator();
@@ -26,10 +26,16 @@ export default function App() {
 				<Stack.Screen name="Intro Pages" component={IntroScreen} />
 				<Stack.Screen name="Courses" component={CoursesScreen} />
 				<Stack.Screen name="Login Page" component={LoginScreen} />
-				<Stack.Screen name="Registration Page" component={RegistrationScreen} />
+				<Stack.Screen
+					name="Registration Page"
+					component={RegistrationScreen}
+				/>
 				<Stack.Screen name="Plan Page" component={PlanScreen} />
 				<Stack.Screen name="Profile Screen" component={ProfileScreen} />
-				<Stack.Screen name="Settings Screen" component={SettingsScreen} />
+				<Stack.Screen
+					name="Settings Screen"
+					component={SettingsScreen}
+				/>
 				<Stack.Screen
 					name="Year Selection Screen"
 					component={YearSelectionScreen}
