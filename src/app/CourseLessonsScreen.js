@@ -11,7 +11,7 @@ export default function CourseLessonsScreen({ navigation, course }) {
 					<LessonDropDown
 						navigation={navigation}
 						dropdownLabel={section.label}
-						lessonSection={section}
+						lessons={section.lessons}
 					/>
 				)}
 			/>
