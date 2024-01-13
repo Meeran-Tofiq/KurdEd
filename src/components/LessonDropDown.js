@@ -16,9 +16,10 @@ export default function LessonDropDown({ navigation, dropdownLabel, lessons }) {
 			<View
 				style={isVisible ? styles.lessons : [styles.lessons, { height: 0 }]}
 			>
-				{lessons.map((lesson) => {
+				{lessons.map((lesson, i) => {
 					return (
 						<LessonOption
+							key={i}
 							label={lesson.label}
 							onPressFunc={() => navigation.navigate(lesson.link)}
 						/>
