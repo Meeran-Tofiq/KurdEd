@@ -10,6 +10,7 @@ import PlanScreen from "./app/PlanScreen";
 import ProfileScreen from "./app/ProfileScreen";
 import SettingsScreen from "./app/SettingsScreen";
 import YearSelectionScreen from "./app/YearSelectionContainer";
+import CourseLessonsScreen from "./app/CourseLessonsScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -32,6 +33,10 @@ export default function App() {
 				<Stack.Screen
 					name="Year Selection Screen"
 					component={YearSelectionScreen}
+				/>
+				<Stack.Screen
+					name="Course Lessons Screen"
+					component={CourseLessonsScreen}
 				/>
 			</Stack.Navigator>
 		</NavigationContainer>
