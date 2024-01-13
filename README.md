@@ -17,6 +17,9 @@ Getting Started
 
 # To get started with KURD ED, follow these simple steps:
 
+Donwload at the following link:
+[Expo]()
+
 # Contributors
 
 This project is brought to you by a dedicated team committed to making a difference in the world of education:
