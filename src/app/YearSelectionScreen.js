@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
 		alignItems: "center",
 		width: "100%",
 		paddingTop: "25%",
-		paddingBottom: "25%",
+		paddingBottom: "10%",
 	},
 	header: {
 		width: "100%",
