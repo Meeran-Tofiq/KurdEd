@@ -1,5 +1,11 @@
 import React from "react";
-import { StyleSheet, Text, TouchableOpacity, Image } from "react-native";
+import {
+	StyleSheet,
+	Text,
+	TouchableOpacity,
+	Image,
+	Pressable,
+} from "react-native";
 import backButton from "../../assets/back-button.png";
 
 export default function BackButton({ navigation, extraStyles }) {
@@ -8,9 +14,9 @@ export default function BackButton({ navigation, extraStyles }) {
 	};
 
 	return (
-		<TouchableOpacity style={extraStyles} onPress={handleBackButton}>
+		<Pressable style={extraStyles} onPress={handleBackButton}>
 			<Image source={backButton} style={styles.button} />
-		</TouchableOpacity>
+		</Pressable>
 	);
 }
 
