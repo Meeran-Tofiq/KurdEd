@@ -8,24 +8,26 @@ import {
 } from "react-native";
 import backButton from "../../assets/back-button.png";
 
-export default function BackButton({ navigation, extraStyles }) {
+export default function BackButton({ navigation }) {
 	const handleBackButton = () => {
 		navigation.goBack();
 	};
 
 	return (
-		<Pressable style={extraStyles} onPress={handleBackButton}>
-			<Image source={backButton} style={styles.button} />
+		<Pressable style={styles.button} onPress={handleBackButton}>
+			<Image source={backButton} style={styles.image} resizeMode="contain" />
 		</Pressable>
 	);
 }
 
 const styles = StyleSheet.create({
 	button: {
-		position: "absolute",
-		top: -110,
-		left: 16,
 		width: 48,
 		height: 48,
+	},
+	image: {
+		flex: 1,
+		width: null,
+		height: null,
 	},
 });
