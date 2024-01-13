@@ -1,16 +1,16 @@
 import { StyleSheet, Text, View } from "react-native";
-import SplashScreen from "./app/SplashScreen";
+import SplashScreen from "./src/app/SplashScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import IntroScreen from "./app/IntroScreen";
-import CoursesScreen from "./app/CoursesScreen";
-import LoginScreen from "./app/LoginScreen";
-import RegistrationScreen from "./app/RegistrationScreen";
-import PlanScreen from "./app/PlanScreen";
-import ProfileScreen from "./app/ProfileScreen";
-import SettingsScreen from "./app/SettingsScreen";
-import YearSelectionScreen from "./app/YearSelectionScreen";
-import CourseLessonsScreen from "./app/CourseLessonsScreen";
+import IntroScreen from "./src/app/IntroScreen";
+import CoursesScreen from "./src/app/CoursesScreen";
+import LoginScreen from "./src/app/LoginScreen";
+import RegistrationScreen from "./src/app/RegistrationScreen";
+import PlanScreen from "./src/app/PlanScreen";
+import ProfileScreen from "./src/app/ProfileScreen";
+import SettingsScreen from "./src/app/SettingsScreen";
+import YearSelectionScreen from "./src/app/YearSelectionScreen";
+import CourseLessonsScreen from "./src/app/CourseLessonsScreen";
 
 const Stack = createNativeStackNavigator();
 
