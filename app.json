@@ -19,10 +19,35 @@
 			"adaptiveIcon": {
 				"foregroundImage": "./assets/adaptive-icon.png",
 				"backgroundColor": "#ffffff"
-			}
+			},
+			"package": "com.merans002.KurdEd"
 		},
 		"web": {
 			"favicon": "./assets/favicon.png"
+		},
+		"extra": {
+			"eas": {
+				"projectId": "7fb0cb58-bcd7-4a05-b2b8-b94f941d3baa"
+			}
+		},
+		"build": {
+			"preview": {
+				"android": {
+					"buildType": "apk"
+				}
+			},
+			"preview2": {
+				"android": {
+					"gradleCommand": ":app:assembleRelease"
+				}
+			},
+			"preview3": {
+				"developmentClient": true
+			},
+			"preview4": {
+				"distribution": "internal"
+			},
+			"production": {}
 		}
 	}
 }
