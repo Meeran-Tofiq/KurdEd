@@ -8,7 +8,11 @@ export default function YearSelectionScreen({ navigation }) {
 	return (
 		<View style={styles.container}>
 			<View style={styles.header}>
-				<Image source={graduationHatImage} />
+				<Image
+					source={graduationHatImage}
+					style={styles.image}
+					resizeMode="cover"
+				/>
 				<Text>قۆناغەکان :</Text>
 			</View>
 			<View style={styles.yearsContainer}>
@@ -16,10 +20,12 @@ export default function YearSelectionScreen({ navigation }) {
 					data={years}
 					renderItem={({ item: year }) => (
 						<ContinueButton
-							extraStyles={{ backgroundColor: "#65AAEA" }}
+							onPressFunc={() => navigation.goBack()}
+							extraStyles={styles.yearButton}
 							label={year}
 						/>
 					)}
+					style={styles.flatList}
 				/>
 			</View>
 		</View>
@@ -31,10 +37,29 @@ const styles = StyleSheet.create({
 		flex: 1,
 		justifyContent: "center",
 		alignItems: "center",
-		paddingTop: "15%",
+		width: "100%",
+		paddingTop: "25%",
+		paddingBottom: "25%",
 	},
-	header: {},
+	header: {
+		width: "100%",
+		alignItems: "center",
+	},
+	image: {
+		width: 100,
+		height: 100,
+	},
 	yearsContainer: {
 		gap: 10,
+		width: "100%",
+		alignItems: "center",
+	},
+	yearButton: {
+		alignSelf: "center",
+		backgroundColor: "#65AAEA",
+		marginVertical: 5,
+	},
+	flatList: {
+		width: "100%",
 	},
 });
