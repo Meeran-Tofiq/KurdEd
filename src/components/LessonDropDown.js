@@ -2,11 +2,7 @@ import React, { useState } from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import LessonOption from "./LessonOption";
 
-export default function LessonDropDown({
-	navigation,
-	dropdownLabel,
-	lessonSection,
-}) {
+export default function LessonDropDown({ navigation, dropdownLabel, lessons }) {
 	const [isVisible, setIsVisible] = useState(false);
 	return (
 		<View style={styles.container}>
@@ -20,7 +16,7 @@ export default function LessonDropDown({
 			<View
 				style={isVisible ? styles.lessons : [setyles.lesson, { height: 0 }]}
 			>
-				{lessonSection.map((lesson) => {
+				{lessons.map((lesson) => {
 					return (
 						<LessonOption
 							label={lesson.label}
