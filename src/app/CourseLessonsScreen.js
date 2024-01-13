@@ -19,6 +19,7 @@ export default function CourseLessonsScreen({ navigation, route }) {
 						lessons={section.lessons}
 					/>
 				)}
+				style={styles.flatList}
 			/>
 		</View>
 	);
@@ -28,7 +29,7 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		alignItems: "center",
-		gap: 20,
+		gap: 10,
 	},
 	header: {
 		borderBottomWidth: 1,
@@ -42,5 +43,8 @@ const styles = StyleSheet.create({
 		fontSize: 20,
 		width: "80%",
 		textAlign: "center",
+	},
+	flatList: {
+		width: "100%",
 	},
 });
