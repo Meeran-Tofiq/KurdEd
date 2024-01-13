@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { FlatList, Pressable, StyleSheet, Text, View } from "react-native";
 import LessonDropDown from "../components/LessonDropDown";
 
-export default function CourseLessonsScreen({ navigation, course }) {
+export default function CourseLessonsScreen({ navigation, route }) {
+	const { course } = route.params;
+
 	return (
 		<View style={styles.contaienr}>
 			<FlatList
