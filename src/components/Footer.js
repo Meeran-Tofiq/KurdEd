@@ -12,7 +12,7 @@ export default function Footer({ navigation, selectedScreen }) {
 	return (
 		<View style={styles.footer}>
 			<Pressable style={styles.container} onPress={() => handlePress(1)}>
-				<CoursesSVG />
+				<CoursesSVG isSelected={selectedScreen === 1} />
 				<Text
 					style={
 						selectedScreen === 1
@@ -24,7 +24,7 @@ export default function Footer({ navigation, selectedScreen }) {
 				</Text>
 			</Pressable>
 			<Pressable style={styles.container} onPress={() => handlePress(2)}>
-				<ProfileSVG />
+				<ProfileSVG isSelected={selectedScreen === 2} />
 				<Text
 					style={
 						selectedScreen === 2
@@ -36,7 +36,7 @@ export default function Footer({ navigation, selectedScreen }) {
 				</Text>
 			</Pressable>
 			<Pressable style={styles.container} onPress={() => handlePress(3)}>
-				<SettingsSVG />
+				<SettingsSVG isSelected={selectedScreen === 3} />
 				<Text
 					style={
 						selectedScreen === 3
