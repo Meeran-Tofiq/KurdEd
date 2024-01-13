@@ -14,7 +14,7 @@ export default function LessonDropDown({ navigation, dropdownLabel, lessons }) {
 			</Pressable>
 
 			<View
-				style={isVisible ? styles.lessons : [setyles.lesson, { height: 0 }]}
+				style={isVisible ? styles.lessons : [styles.lessons, { height: 0 }]}
 			>
 				{lessons.map((lesson) => {
 					return (
