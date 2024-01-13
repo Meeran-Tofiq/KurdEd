@@ -9,4 +9,12 @@ export default function LessonOption({ label, onPressFunc }) {
 	);
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+	container: {
+		flex: 1,
+		borderWidth: 1,
+		borderColor: "rgba(190, 186, 179, 1)",
+		borderRadius: 15,
+		padding: 10,
+	},
+});
