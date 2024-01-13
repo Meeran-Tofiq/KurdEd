@@ -9,31 +9,36 @@ import RegistrationScreen from "./app/RegistrationScreen";
 import PlanScreen from "./app/PlanScreen";
 import ProfileScreen from "./app/ProfileScreen";
 import SettingsScreen from "./app/SettingsScreen";
+import CoursesDetailScreen from "./app/CoursesDetailScreen";
 import YearSelectionScreen from "./app/YearSelectionContainer";
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
-	return (
-		<NavigationContainer>
-			<Stack.Navigator
-				screenOptions={{
-					headerShown: false,
-				}}
-			>
-				<Stack.Screen name="Splash Screen" component={SplashScreen} />
-				<Stack.Screen name="Intro Pages" component={IntroScreen} />
-				<Stack.Screen name="Courses" component={CoursesScreen} />
-				<Stack.Screen name="Login Page" component={LoginScreen} />
-				<Stack.Screen name="Registration Page" component={RegistrationScreen} />
-				<Stack.Screen name="Plan Page" component={PlanScreen} />
-				<Stack.Screen name="Profile Screen" component={ProfileScreen} />
-				<Stack.Screen name="Settings Screen" component={SettingsScreen} />
-				<Stack.Screen
-					name="Year Selection Screen"
-					component={YearSelectionScreen}
-				/>
-			</Stack.Navigator>
-		</NavigationContainer>
-	);
+  return (
+    <NavigationContainer>
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false,
+        }}
+      >
+        <Stack.Screen name="Splash Screen" component={SplashScreen} />
+        <Stack.Screen name="Intro Pages" component={IntroScreen} />
+        <Stack.Screen name="Courses" component={CoursesScreen} />
+        <Stack.Screen name="Login Page" component={LoginScreen} />
+        <Stack.Screen name="Registration Page" component={RegistrationScreen} />
+        <Stack.Screen name="Plan Page" component={PlanScreen} />
+        <Stack.Screen name="Profile Screen" component={ProfileScreen} />
+        <Stack.Screen name="Settings Screen" component={SettingsScreen} />
+        <Stack.Screen
+          name="Courses Detail Screen"
+          component={CoursesDetailScreen}
+        />
+        <Stack.Screen
+          name="Year Selection Screen"
+          component={YearSelectionScreen}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 }
