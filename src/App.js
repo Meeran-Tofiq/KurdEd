@@ -29,6 +29,10 @@ export default function App() {
 				<Stack.Screen name="Plan Page" component={PlanScreen} />
 				<Stack.Screen name="Profile Screen" component={ProfileScreen} />
 				<Stack.Screen name="Settings Screen" component={SettingsScreen} />
+				<Stack.Screen
+					name="Year Selection Screen"
+					component={YearSelectionScreen}
+				/>
 			</Stack.Navigator>
 		</NavigationContainer>
 	);
