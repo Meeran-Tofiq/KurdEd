@@ -29,4 +29,4 @@ export default function LessonDropDown({ navigation, dropdownLabel, lessons }) {
 	);
 }
 
-const styles = StyleSheet.create();
+const styles = StyleSheet.create({});
