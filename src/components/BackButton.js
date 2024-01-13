@@ -15,7 +15,11 @@ export default function BackButton({ navigation }) {
 
 	return (
 		<Pressable style={styles.button} onPress={handleBackButton}>
-			<Image source={backButton} style={styles.image} resizeMode="contain" />
+			<Image
+				source={backButton}
+				style={styles.image}
+				resizeMode="contain"
+			/>
 		</Pressable>
 	);
 }
