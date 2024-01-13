@@ -18,7 +18,7 @@ Getting Started
 # To get started with KURD ED, follow these simple steps:
 
 Donwload at the following link:
-[Expo]()
+[Expo Build](https://drive.google.com/file/d/1X8ul_eqtYuImBpvME-EFFTc050crWqUx/view?usp=drive_link)
 
 # Contributors
 
