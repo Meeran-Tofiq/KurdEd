@@ -1,5 +1,6 @@
 import React from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
+import { CoursesSVG, ProfileSVG, SettingsSVG } from "./SVG";
 
 export default function Footer({ navigation, selectedScreen }) {
 	const pages = ["Courses", "Profile Screen", "Settings Screen"];
@@ -11,6 +12,7 @@ export default function Footer({ navigation, selectedScreen }) {
 	return (
 		<View style={styles.footer}>
 			<Pressable style={styles.container} onPress={() => handlePress(1)}>
+				<CoursesSVG isSelected={selectedScreen === 1} />
 				<Text
 					style={
 						selectedScreen === 1
@@ -22,6 +24,7 @@ export default function Footer({ navigation, selectedScreen }) {
 				</Text>
 			</Pressable>
 			<Pressable style={styles.container} onPress={() => handlePress(2)}>
+				<ProfileSVG isSelected={selectedScreen === 2} />
 				<Text
 					style={
 						selectedScreen === 2
@@ -33,6 +36,7 @@ export default function Footer({ navigation, selectedScreen }) {
 				</Text>
 			</Pressable>
 			<Pressable style={styles.container} onPress={() => handlePress(3)}>
+				<SettingsSVG isSelected={selectedScreen === 3} />
 				<Text
 					style={
 						selectedScreen === 3
@@ -51,29 +55,25 @@ const styles = StyleSheet.create({
 	footer: {
 		position: "absolute",
 		bottom: -25,
-		flexDirection: "row-reverse",
-		height: 102,
-		width: "100%",
 		borderRadius: 12,
 		borderWidth: 1,
+		height: 102,
+		width: "100%",
 		borderColor: "grey",
-		paddingTop: 12,
+		flexDirection: "row-reverse",
 		justifyContent: "space-around",
-		alignItems: "center",
+		alignItems: "flex-start",
 		backgroundColor: "white",
 	},
 	text: {
 		fontSize: 16,
 		color: "rgba(190, 186, 179, 1)",
 	},
-	selectedText: {
-		fontSize: 16,
-		color: "#E3562A",
-	},
 	container: {
 		height: "100%",
 		justifyContent: "center",
 		alignItems: "center",
 		width: "33%",
+		gap: 5,
 	},
 });

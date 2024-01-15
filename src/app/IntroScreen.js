@@ -30,7 +30,11 @@ export default function IntroScreen({ navigation }) {
 			{/* ^this will be the container of the entire intro 1*/}
 			<SkipButton onPressFunc={() => navigation.navigate("Login Page")} />
 			<View style={styles.imageContainer}>
-				<Image source={images[pageNo]} />
+				<Image
+					source={images[pageNo]}
+					style={styles.image}
+					resizeMode={"stretch"}
+				/>
 			</View>
 			<View style={styles.textContaienr}>
 				<Text style={styles.title}>{titles[pageNo]}</Text>
@@ -60,9 +64,17 @@ const styles = StyleSheet.create({
 		flex: 1,
 		alignItems: "center",
 		justifyContent: "center",
-		gap: 30,
+		gap: 20,
 	},
-	imageContainer: {},
+	imageContainer: {
+		height: 390,
+		width: 390,
+		marginTop: "30%",
+		flex: 1,
+		justifyContent: "center",
+		alignItems: "center",
+	},
+	image: {},
 	textContaienr: {
 		alignItems: "center",
 	},

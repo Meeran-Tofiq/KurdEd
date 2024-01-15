@@ -17,6 +17,24 @@ const courses = [
 			minutes: 34,
 		},
 		img: courseImage,
+		sections: [
+			{
+				label: "بەندی ١",
+				lessons: [
+					{ label: "جێناو", link: "" },
+					{ label: "ئامڕاز", link: "" },
+					{ label: "بکەر نادیار", link: "" },
+				],
+			},
+			{
+				label: "بەندی ٢",
+				lessons: [
+					{ label: "کار", link: "" },
+					{ label: "جێناوی داهاتوو", link: "" },
+					{ label: "بکەر نادیار", link: "" },
+				],
+			},
+		],
 	},
 	{
 		title: "Sunrise - مامۆستا ئەحمەد",
@@ -26,6 +44,24 @@ const courses = [
 			minutes: 34,
 		},
 		img: courseImage,
+		sections: [
+			{
+				label: "بەندی ١",
+				lessons: [
+					{ label: "جێناو", link: "" },
+					{ label: "ئامڕاز", link: "" },
+					{ label: "بکەر نادیار", link: "" },
+				],
+			},
+			{
+				label: "بەندی ٢",
+				lessons: [
+					{ label: "کار", link: "" },
+					{ label: "جێناوی داهاتوو", link: "" },
+					{ label: "بکەر نادیار", link: "" },
+				],
+			},
+		],
 	},
 	{
 		title: "زانست بۆ هەمووان - مامۆستا میران",
@@ -35,6 +71,24 @@ const courses = [
 			minutes: 34,
 		},
 		img: courseImage,
+		sections: [
+			{
+				label: "بەندی ١",
+				lessons: [
+					{ label: "جێناو", link: "" },
+					{ label: "ئامڕاز", link: "" },
+					{ label: "بکەر نادیار", link: "" },
+				],
+			},
+			{
+				label: "بەندی ٢",
+				lessons: [
+					{ label: "کار", link: "" },
+					{ label: "جێناوی داهاتوو", link: "" },
+					{ label: "بکەر نادیار", link: "" },
+				],
+			},
+		],
 	},
 ];
 
