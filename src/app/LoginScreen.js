@@ -19,12 +19,12 @@ export default function LoginScreen({ navigation }) {
 	const [hasSubscribed, setHasSubscribed] = useState(true);
 
 	const handleLoginButton = () => {
-		navigation.navigate("Courses", { hasSubscribed: true });
+		navigation.navigate("Homepage Screen", { hasSubscribed: true });
 	};
 
 	const handleSkipButton = () => {
 		setHasSubscribed(false);
-		navigation.navigate("Courses", { hasSubscribed: false });
+		navigation.navigate("Homepage Screen", { hasSubscribed: false });
 	};
 
 	const handleRegisterButton = () => {
@@ -41,7 +41,9 @@ export default function LoginScreen({ navigation }) {
 
 			<View>
 				<Text style={styles.loginHeader}>چوونە ژوورەوە</Text>
-				<Text style={styles.loginSmallText}>بچۆرە ژووەرە بە یەکێک لەمانە</Text>
+				<Text style={styles.loginSmallText}>
+					بچۆرە ژووەرە بە یەکێک لەمانە
+				</Text>
 			</View>
 
 			<View style={styles.loginIconsContainer}>
