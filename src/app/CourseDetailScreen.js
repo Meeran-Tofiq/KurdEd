@@ -9,7 +9,7 @@ export default function CourseDetailScreen({ navigation, route }) {
 	const rating = 3.5;
 
 	const handleContinueButton = () => {
-		navigation.navigate("Course Lessons Screen");
+		navigation.navigate("Course Lessons Screen", { course: course });
 	};
 
 	return (
