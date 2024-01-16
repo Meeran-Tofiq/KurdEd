@@ -12,7 +12,7 @@ export default function SplashScreen({ navigation }) {
 					<View style={styles.Title}>
 						<Text style={styles.Text}>KURD ED</Text>
 					</View>
-					<Text style={styles.textContent}>بخوێنە لە هەر شوێنێکبیت!</Text>
+					<Text style={styles.textContent}>داهاتووت بنیاد بنێ!</Text>
 				</View>
 			</View>
 			<ContinueButton
