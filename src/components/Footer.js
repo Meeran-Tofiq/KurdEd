@@ -2,20 +2,22 @@ import React from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import { CoursesSVG, ProfileSVG, SettingsSVG } from "./SVG";
 
-export default function Footer({ navigation, selectedScreen }) {
-	const pages = ["Courses", "Profile Screen", "Settings Screen"];
-
+export default function Footer({ selectedPage, setSelectedPage }) {
+	const [courses, profile, settings] = [0, 1, 2];
 	const handlePress = (num) => {
-		navigation.navigate(pages[num - 1]);
+		setSelectedPage(num);
 	};
 
 	return (
 		<View style={styles.footer}>
-			<Pressable style={styles.container} onPress={() => handlePress(1)}>
-				<CoursesSVG isSelected={selectedScreen === 1} />
+			<Pressable
+				style={styles.container}
+				onPress={() => handlePress(courses)}
+			>
+				<CoursesSVG isSelected={selectedPage === courses} />
 				<Text
 					style={
-						selectedScreen === 1
+						selectedPage === courses
 							? [styles.text, { color: "#E3562A" }]
 							: styles.text
 					}
@@ -23,11 +25,14 @@ export default function Footer({ navigation, selectedScreen }) {
 					وانەکان
 				</Text>
 			</Pressable>
-			<Pressable style={styles.container} onPress={() => handlePress(2)}>
-				<ProfileSVG isSelected={selectedScreen === 2} />
+			<Pressable
+				style={styles.container}
+				onPress={() => handlePress(profile)}
+			>
+				<ProfileSVG isSelected={selectedPage === profile} />
 				<Text
 					style={
-						selectedScreen === 2
+						selectedPage === profile
 							? [styles.text, { color: "#E3562A" }]
 							: styles.text
 					}
@@ -35,11 +40,14 @@ export default function Footer({ navigation, selectedScreen }) {
 					پڕۆفایل
 				</Text>
 			</Pressable>
-			<Pressable style={styles.container} onPress={() => handlePress(3)}>
-				<SettingsSVG isSelected={selectedScreen === 3} />
+			<Pressable
+				style={styles.container}
+				onPress={() => handlePress(settings)}
+			>
+				<SettingsSVG isSelected={selectedPage === settings} />
 				<Text
 					style={
-						selectedScreen === 3
+						selectedPage === settings
 							? [styles.text, { color: "#E3562A" }]
 							: styles.text
 					}

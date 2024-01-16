@@ -4,7 +4,7 @@ import img from "../../assets/cool-kids-smile.png";
 import Footer from "../components/Footer";
 import ProfileRedirectButton from "../components/ProfileRedirectButton";
 
-export default function ProfileScreen({ navigation }) {
+export default function HomepageProfile({ navigation }) {
 	const profileBtns = [
 		{ label: "وانەکانم", redirectLink: "My Courses Screen", key: 0 },
 		{ label: "بیرخەرەوە", redirectLink: "Reminders Screen", key: 1 },
@@ -33,7 +33,6 @@ export default function ProfileScreen({ navigation }) {
 				</View>
 				<Text style={styles.removeAccountText}>لابردنی ئەژمێر</Text>
 			</View>
-			<Footer navigation={navigation} selectedScreen={2} />
 		</View>
 	);
 }
