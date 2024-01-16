@@ -10,7 +10,7 @@ import PlanScreen from "./src/app/PlanScreen";
 import ProfileScreen from "./src/app/ProfileScreen";
 import SettingsScreen from "./src/app/SettingsScreen";
 import YearSelectionScreen from "./src/app/YearSelectionScreen";
-import CoursesDetailScreen from "./src/app/CoursesDetailScreen";
+import CourseDetailScreen from "./src/app/CourseDetailScreen";
 import CourseLessonsScreen from "./src/app/CourseLessonsScreen";
 
 const Stack = createNativeStackNavigator();
@@ -43,7 +43,7 @@ export default function App() {
 				/>
 				<Stack.Screen
 					name="Courses Detail Screen"
-					component={CoursesDetailScreen}
+					component={CourseDetailScreen}
 				/>
 				<Stack.Screen
 					name="Course Lessons Screen"
